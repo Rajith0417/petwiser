@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { card } from '../../models/card.model';
 import { MatIconModule } from '@angular/material/icon'
 
@@ -10,10 +10,14 @@ import { MatIconModule } from '@angular/material/icon'
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
-export class CardComponent {
+export class CardComponent implements OnInit{
 
   @Input() card!: card;
   isActive: boolean = false;
+
+  ngOnInit(): void {
+    console.log(this.card.image);
+  }
 
   slideUp(){
     this.isActive = !this.isActive;
