@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <div class="image-container">
+    <img class="image" src="/{{card.image}}" alt="">
+  </div>
+  <div class="details" (click)="slideUp()" [ngClass]="{'clicked': isActive}">
+    <div class="chevron">
+      <mat-icon>chevron_right</mat-icon>
+    </div>
+    <div class="top">
+      <div class="title">{{card.title}}</div>
+      <div class="email">{{card.email}}</div>
+      <div class="icon">
+        <mat-icon>{{card.icon}}</mat-icon>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="tags">
+        <span class="tag">Designer</span>
+        <span class="tag">UX/UI</span>
+        <span class="tag">Interaction designer</span>
+        <span class="tag">User experience</span>
+        <span class="tag">User interface</span>
+        <!-- <span class="tag">Interactive</span>
+        <span class="tag">UX</span> -->
+
+      </div>
+      <div class="button-wrapper">
+        <button class="button white" type="button">Message</button>
+        <button class="button blue" type="button">Hire</button>
+      </div>
+
+    </div>
+    <div class="transparent"></div>
+  </div>
+</div>
